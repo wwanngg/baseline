@@ -1,0 +1,14 @@
+PI = 22.0 / 7
+EPS = 1e-08
+SHRINK_FACTOR = 0.9999999
+RANDOM_SEED = 42
+TARGET_SIZE = [256, 384]
+MAXIMUM_BATCH_SIZE = 256
+NUM_WORKERS = 0
+OPTIMIZERS = ['adam', 'adamw', 'adamax', 'nadam', 'sgd']
+CAPTURE_DATA = ['iso', 'shutter_speed', 'flash', 'time', 'noise_stats', 'snr_stats']
+TESTING_SET_NAMES = ['test', 'val']
+DEVICES = ['cpu', 'gpu']
+WITHOUT_MASK_SUB_FOLDER = 'raw_images_wo_mask'
+WITH_MASK_SUB_FOLDER = 'raw_images'
+TOTAL_SECONDS = 86400

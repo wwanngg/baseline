@@ -1,0 +1,5 @@
+numpy>=1.26
+opencv-python>=4.9
+torch>=2.2
+gymnasium>=0.29
+PyYAML>=6.0

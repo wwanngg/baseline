@@ -1,0 +1,52 @@
+seed: 42
+device: xpu
+dataset:
+  root: AE/DataSet_AE
+  side: left
+  exposure_step_us: 3000
+  eval_scenes:
+  - outdoor_car5_5290Lux
+  - outdoor_weed1_3350Lux
+  - indoor_lounage1_200Lux
+  - indoor_meeting_room2_191Lux
+state:
+  roi:
+    height: 600
+    width: 800
+  resize_width: 128
+  history: 3
+reward:
+  brightness_target: 0.5
+  brightness_p: 0.5
+  weights:
+    mean: 1.5
+    flicker: 1.0
+    sharpness: 0.1
+env:
+  max_episode_steps: 30
+  early_termination: true
+  convergence_threshold: 0.04
+  convergence_patience: 3
+agent:
+  type: dqn
+  gamma: 0.99
+  lr: 0.0003
+  hidden_sizes:
+  - 256
+  - 256
+  - 256
+  batch_size: 64
+  buffer_size: 100000
+  warmup_steps: 1000
+  target_update_every: 500
+  epsilon_start: 1.0
+  epsilon_end: 0.05
+  epsilon_decay_steps: 20000
+  grad_clip: 10.0
+train:
+  total_steps: 50000
+  log_every: 200
+  eval_every: 2500
+  eval_episodes: 10
+  output_dir: AE/dqn_grid/runs
+  early_stopping_patience: 8

@@ -1,0 +1,11 @@
+/AE/DataSet_AE/
+/AWB/S24_val/
+/AWB/time_aware_awb/weights/
+/AWB/rl_awb/weights/
+/AWB/gcc/weights/
+**/results/
+**/runs/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.cache/
